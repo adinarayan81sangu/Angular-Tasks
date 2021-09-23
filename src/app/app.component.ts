@@ -6,6 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Angular-Tasks';
+  title = 'Angular-Tasks'
+    
+
+  Angular(){
+    //var x=2;
+    //var z=5;
+
+      
+  }
   
 }

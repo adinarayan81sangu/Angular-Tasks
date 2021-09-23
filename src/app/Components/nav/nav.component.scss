@@ -1,8 +1,36 @@
 $myColor:red;
 $myfont:sans-serif;
 $myFontSize:90px;
+$mynavlistColor:white;
+$navBackroundColor:rgb(240, 84, 84);
+
 h1{
     color: $myColor;
     font: $myfont;
     font-size: $myFontSize;
+}
+nav{
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color:$navBackroundColor;
+      }
+      
+      li {
+        float: left;
+      }
+      
+      li a {
+        display: block;
+        color:$mynavlistColor;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      
+      li a:hover {
+        background-color: #111;
+      }
 }

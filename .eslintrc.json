@@ -22,8 +22,18 @@
         "no-console":["error",{
           "allow":["error"]
         }],
+        //error message display when we declare string with in double quotes
         "quotes":["error","single"],
-        "indent":["error",2],
+        //this can be used warning message for indentation of nested blocks
+        "indent":["warn",2],
+        //warning message display when we declare var keyword
+         "no-var":"warn",
+         //error meassage display when we declare dup arguments in funtion like fun(a,b,a)
+         "no-dupe-args":"error",
+         //when we declare == and != error message display (we use === and !==)
+         "eqeqeq":"error",
+         //error message display when the loop is infinity
+        "for-direction":"error",
         "@angular-eslint/directive-selector": [
           "error",
           {
@@ -49,7 +59,9 @@
       "extends": [
         "plugin:@angular-eslint/template/recommended"
       ],
-      "rules": {}
+      "rules": {
+
+      }
     }
   ]
 }
