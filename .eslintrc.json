@@ -27,7 +27,7 @@
         //this can be used warning message for indentation of nested blocks
         "indent":["warn",2],
         //warning message display when we declare var keyword
-         "no-var":"warn",
+         "no-var":1,
          //error meassage display when we declare dup arguments in funtion like fun(a,b,a)
          "no-dupe-args":"error",
          //when we declare == and != error message display (we use === and !==)
@@ -42,6 +42,175 @@
             "style": "camelCase"
           }
         ],
+        "@typescript-eslint/naming-convention":[
+          "error",
+          {
+            "selector": "default",
+            "format": ["camelCase"],
+            "leadingUnderscore": "forbid",
+            "trailingUnderscore": "forbid"
+          },
+          {
+            "selector": "variable",
+            "modifiers": [
+              "global",
+              "const"
+            ],
+            "format": [
+              "camelCase",
+              "UPPER_CASE"
+            ]
+          },
+          {
+            "selector": "variable",
+            "modifiers": ["exported", "const"],
+            "format": ["UPPER_CASE"]
+          },
+          {
+            "selector": "function",
+            "modifiers": [
+              "exported"
+            ],
+            "format": ["UPPER_CASE"]
+          },
+          {
+            "selector": "parameter",
+            "modifiers": ["unused"],
+            "format": ["camelCase"],
+            "leadingUnderscore": "allow"
+          },
+          {
+            "selector": "property",
+            "modifiers": [
+              "private"
+            ],
+            "format": ["camelCase"],
+            "leadingUnderscore": "require"
+          },
+          {
+            "selector": "property",
+            "modifiers": [
+              "protected"
+            ],
+            "format": ["camelCase"],
+            "leadingUnderscore": "require"
+          },
+          {
+            "selector": "property",
+            "modifiers": [
+              "public",
+              "static",
+              "readonly"
+            ],
+            "format": ["UPPER_CASE"]
+          },
+          {
+            "selector": "property",
+            "modifiers": [
+              "readonly"
+            ],
+            "format": ["UPPER_CASE"]
+          },
+          {
+            "selector": "method",
+            "format": ["camelCase"],
+            "modifiers": ["protected"],
+            "leadingUnderscore": "forbid"
+          },      
+          {
+            "selector": "method",
+            "format": ["camelCase"],
+            "modifiers": ["protected"],
+            "leadingUnderscore": "forbid"
+          },
+          {
+            "selector": "class",
+            "format": ["PascalCase"]
+          },      
+          {
+            "selector": "class",
+            "format": [
+              "PascalCase"
+            ],
+            "modifiers": [
+              "abstract"
+            ],
+            "custom": {
+              "regex": "^Abstract[A-Z]",
+              "match": true
+            }
+          },
+          {
+            "selector": "interface",
+            "format": [
+              "PascalCase"
+            ],
+            "custom": {
+              "regex": "^I[A-Z]",
+              "match": true
+            }
+          },
+          {
+            "selector": [
+              "variable",
+              "function"
+            ],
+            "format": [
+              "camelCase",
+              "UPPER_CASE"
+            ],
+            "leadingUnderscore": "allow"
+          },
+          {
+            "selector": "typeParameter",
+            "format": [
+              "PascalCase"
+            ],
+            "prefix": [
+              "R",
+              "S",
+              "T",
+              "U",
+              "V"
+            ]
+          },
+          {
+            "selector": "typeAlias",
+            "format": ["PascalCase"],
+            "custom": {
+              "regex": "^T[A-Z]",
+              "match": true
+            }
+    
+          },       
+          {
+            "selector": ["enumMember", "enum"],
+            "format": [
+                "PascalCase"
+            ]
+          }
+        ],
+        "@typescript-eslint/member-ordering": "error",
+        "@typescript-eslint/space-before-function-paren": [
+          "error",
+          {
+            "anonymous": "never",
+            "named": "never",
+            "asyncArrow": "always"
+          }
+        ],
+        "@typescript-eslint/lines-between-class-members": [
+          "warn",
+          "always",
+          {
+            "exceptAfterSingleLine": true
+          }
+        ],
+        "space-before-blocks": "error",
+        "key-spacing":"error",
+        "no-debugger": "error",
+    //
+    "import/newline-after-import": ["warn", { "count": 1 }],
         "@angular-eslint/component-selector": [
           "error",
           {

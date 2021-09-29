@@ -9,8 +9,9 @@ export class AppComponent {
   title = 'Angular-Tasks'
     
 
-  Angular(){
-    //var x=2;
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  Angular() {
+    // var x=2;
     //var z=5;
 
       
